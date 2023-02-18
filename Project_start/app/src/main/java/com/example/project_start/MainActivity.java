@@ -2,9 +2,7 @@ package com.example.project_start;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.widget.Toast;
-import android.view.View;
 import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
@@ -63,9 +61,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override //при закрытии приложения
     protected void onDestroy() {
-        Toast TT=Toast.makeText(getApplicationContext(),"Программа закончила работу!",Toast.LENGTH_LONG);
+        super.onDestroy();
+        Toast TT=Toast.makeText(getApplicationContext(),"Программа закончила работу! (onDestroy)",Toast.LENGTH_LONG);
         TT.show();
         Log.e(TAG, "onDestroy");
-        super.onDestroy();
     }
 }
