@@ -2,6 +2,7 @@ package com.example.project_start;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,9 +18,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TextView text = (TextView)findViewById(R.id.Pharmacology);
+        //TextView text = (TextView)findViewById(R.id.Pharmacology);
         String str = getResources().getString(R.string.app_name);
-        text.setText(str);
+        //text.setText(str);
 
         ImageView image = (ImageView)findViewById(R.id.imageView2);
         Drawable draw = getResources().getDrawable(R.drawable.___________2);
@@ -32,9 +33,17 @@ public class MainActivity extends AppCompatActivity {
                 //Log.i(TAG, "Accepted");
             //}
         //});
-    }
 
+        Intent intent = new Intent(this, MainActivity2.class);
+        startActivity(intent);
+        intent.putExtra("medication", "day");
+        startActivity(intent);
+
+
+
+    }
     public void onMenuClick(View view) {
         Log.i(TAG, "Accepted");
     }
 }
+

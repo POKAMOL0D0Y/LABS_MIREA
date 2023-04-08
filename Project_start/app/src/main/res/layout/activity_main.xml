@@ -6,57 +6,51 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="197dp"
-        android:layout_height="194dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="1dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weigth="1"
+            android:text="ГРАФИК ПРИЁМА"
+            android:textColor="@color/green"
+            android:backgroundTint="@color/white"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="121dp"
+            tools:layout_editor_absoluteY="45dp" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="СОСТАВЛЕН ДОКТОРОМ:"
+            android:textColor="@color/green"
+            tools:layout_editor_absoluteX="87dp"
+            tools:layout_editor_absoluteY="120dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weigth="1"
+            android:backgroundTint="@color/green"
+            android:text="СОСТАВИТЬ ГРАФИК"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="74dp"
+            tools:layout_editor_absoluteY="242dp" />
 
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@drawable/___________" />
-    </LinearLayout>
+            />
 
-    <RelativeLayout
-        android:layout_width="177dp"
-        android:layout_height="110dp"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="616dp">
-
-        <Button
-            android:id="@+id/accepted"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:onClick="onMenuClick"
-            android:text="Button" />
-    </RelativeLayout>
-
-    <TextView
-        android:id="@+id/Pharmacology"
-        android:layout_width="177dp"
-        android:layout_height="83dp"
-        android:layout_marginTop="368dp"
-        android:layout_marginEnd="116dp"
-        android:text="Pharmacology"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="480dp"
-        android:layout_marginEnd="100dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
